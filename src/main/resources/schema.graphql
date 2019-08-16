@@ -1,0 +1,16 @@
+type Like {
+    clientId: String!
+    entityName: String!
+    entityId: ID!
+    value: Int
+}
+
+type Query {
+    getLike(clientId: String!, entityName: String!, entityId: ID!): Like
+}
+
+type Mutation {
+    addLike(clientId: String!, entityName: String!, entityId: ID!): Like
+    subtractLike(clientId: String!, entityName: String!, entityId: ID!): Like
+    removeLike(clientId: String!, entityName: String!, entityId: ID!): Like
+}
